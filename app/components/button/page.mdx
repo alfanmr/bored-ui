@@ -1,0 +1,67 @@
+'use client' // Mark this page as a Client Component to use hooks/components
+
+import { Button } from '@boredui/components';
+import { BoredProvider, useMessage } from '@boredui/core'; // Import useMessage too
+import { useState } from 'react';
+
+# Button
+
+This page documents the `Button` component.
+
+## Basic Usage
+
+<BoredProvider>
+  <Button>Default Button</Button>
+  <Button variant="primary" style={{ marginLeft: '8px' }}>Primary Button</Button>
+</BoredProvider>
+
+## Variants
+
+<BoredProvider>
+  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap', marginBottom: '16px' }}>
+    <Button variant="default">Default</Button>
+    <Button variant="primary">Primary</Button>
+    <Button variant="dashed">Dashed</Button>
+    <Button variant="text">Text</Button>
+    <Button variant="link">Link</Button>
+  </div>
+  <div style={{ display: 'flex', gap: '8px', flexWrap: 'wrap' }}>
+    <Button variant="primary-danger">Primary Danger</Button>
+    <Button variant="default-ghost">Default Ghost</Button>
+    <Button variant="primary-block">Primary Block</Button>
+  </div>
+</BoredProvider>
+
+## Loading
+
+<BoredProvider>
+  <Button loading>Loading Default</Button>
+  <Button variant="primary" loading style={{ marginLeft: '8px' }}>Loading Primary</Button>
+</BoredProvider>
+
+## With Icon
+
+{/* TODO: Add Icon component later */}
+<BoredProvider>
+  <Button icon={<span>🚀</span>}>With Icon</Button>
+</BoredProvider>
+
+## Using Message API
+
+export function MessageDemo() {
+  const { message } = useMessage(); // Use the hook
+  return (
+    <Button variant="primary" onClick={() => message.success('Button clicked!')}>
+      Show Success Message
+    </Button>
+  );
+}
+
+<BoredProvider>
+  <MessageDemo />
+</BoredProvider>
+
+
+## API
+
+{/* TODO: Add API table */}

@@ -1,0 +1,5 @@
+/* Basic reset and body styles */
+body {
+  margin: 0;
+  font-family: sans-serif; /* Will be overridden by font in layout */
+}
